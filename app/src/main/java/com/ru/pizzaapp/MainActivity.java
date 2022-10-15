@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     //TODO: Test the app on different screen sizes and android versions
     //TODO: Remove redunant resources
     // TODO: Check the correctness of names of all files and directories
+    //TODO: Make sure that the code is well documented and easy to understand
 
     private ActivityMainBinding binding;
 

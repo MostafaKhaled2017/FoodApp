@@ -1,44 +1,35 @@
 package com.ru.pizzaapp.views.home;
 
-import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
+import com.ru.pizzaapp.models.Food;
+
+import java.util.ArrayList;
+
 public class HomeViewModel extends ViewModel {
 
-    private final MutableLiveData<String> mText;
+    MutableLiveData<ArrayList<Food>> menuLiveData;
+    ArrayList<Food> menuList;
 
     public HomeViewModel() {
-        mText = new MutableLiveData<>();
-        mText.setValue("This is home fragment\n" +
-                "        <com.google.android.material.appbar.CollapsingToolbarLayout\n" +
-                "            id=\"@+id/collapsing_toolbar\"\n" +
-                "            android:layout_width=\"match_parent\"\n" +
-                "            android:layout_height=\"match_parent\"\n" +
-                "            android:fitsSystemWindows=\"true\"\n" +
-                "            app:contentScrim=\"?attr/colorPrimary\"\n" +
-                "            app:layout_scrollFlags=\"scroll|snap|exitUntilCollapsed\"\n" +
-                "            app:title=\"Pizza App\">\n" +
-                "\n" +
-                "            <androidx.appcompat.widget.AppCompatImageView\n" +
-                "                android:layout_width=\"450dp\"\n" +
-                "                android:layout_height=\"250dp\"\n" +
-                "                android:src=\"@drawable/ic_notifications_black_24dp\"\n" +
-                "                android:scaleType=\"centerCrop\"\n" +
-                "                android:layout_gravity=\"center|end\"\n" +
-                "                android:layout_margin=\"10dp\"\n" +
-                "                app:layout_collapseMode=\"parallax\"/>\n" +
-                "\n" +
-                "            <androidx.appcompat.widget.Toolbar\n" +
-                "                android:layout_width=\"match_parent\"\n" +
-                "                android:layout_height=\"match_parent\">\n" +
-                "\n" +
-                "            </androidx.appcompat.widget.Toolbar>\n" +
-                "\n" +
-                "        </com.google.android.material.appbar.CollapsingToolbarLayout>");
+        menuLiveData = new MutableLiveData<>();
+        init();
+    }
+    public MutableLiveData<ArrayList<Food>> getFoodMutableLiveData(){
+        return menuLiveData;
     }
 
-    public LiveData<String> getText() {
-        return mText;
+    public void init(){
+
+        // Adding data to the list
+        //TODO get data from server
+        menuList = new ArrayList<>();
+        menuList.add(new Food("Pizza", "Delecious Pizza", "https://www.pizzahut.com.ua/images/2019/11/26/5ddc0b0b5b8b0.jpg"));
+        menuList.add(new Food("Burger", "Nice Burger", "https://www.pizzahut.com.ua/images/2019/11/26/5ddc0b0b5b8b0.jpg"));
+        menuList.add(new Food("Salad", "Green Salad", "https://www.pizzahut.com.ua/images/2019/11/26/5ddc0b0b5b8b0.jpg"));
+        menuList.add(new Food("Dessert", "Cool dessert", "https://www.pizzahut.com.ua/images/2019/11/26/5ddc0b0b5b8b0.jpg"));
+
+        menuLiveData.setValue(menuList);
     }
 }
