@@ -1,20 +1,16 @@
 package com.ru.pizzaapp;
 
+import static com.ru.pizzaapp.utils.Firebase.fireStoreDb;
+
 import android.os.Bundle;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
-import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
-import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreSettings;
 import com.ru.pizzaapp.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
@@ -46,6 +42,16 @@ public class MainActivity extends AppCompatActivity {
 
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
         NavigationUI.setupWithNavController(binding.navView, navController);
+
+        //Initialize firebase settings to allow Offline persistence
+        firebaseInit();
+    }
+
+    private void firebaseInit() {
+        FirebaseFirestoreSettings settings = new FirebaseFirestoreSettings.Builder()
+                .setPersistenceEnabled(true)
+                .build();
+        fireStoreDb.setFirestoreSettings(settings);
     }
 
 

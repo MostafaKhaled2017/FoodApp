@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView android:id="@+id/horizonal_bar"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingStart="10dp"
+    android:paddingBottom="5dp"
+    android:paddingTop="8dp"
+    android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        style="@style/groupStylecornerRadius_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtOne"
+            style="@style/txtSolidRounded"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:ellipsize="end"
+            android:paddingStart="24dp"
+            android:paddingTop="11dp"
+            android:paddingEnd="23dp"
+            android:paddingBottom="7dp"
+            android:singleLine="true"
+            android:text="Пицца" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtTwo"
+            style="@style/txtSolidRounded_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="0.25"
+            android:ellipsize="end"
+            android:paddingStart="24dp"
+            android:paddingTop="11dp"
+            android:paddingEnd="25dp"
+            android:paddingBottom="7dp"
+            android:singleLine="true"
+            android:text="Комбо" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtThree"
+            style="@style/txtSolidRounded_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="0.25"
+            android:ellipsize="end"
+            android:paddingStart="18dp"
+            android:paddingTop="11dp"
+            android:paddingEnd="17dp"
+            android:paddingBottom="7dp"
+            android:singleLine="true"
+            android:text="Десерты" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtFour"
+            style="@style/txtSolidRounded_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="0.25"
+            android:ellipsize="end"
+            android:paddingStart="18dp"
+            android:paddingTop="11dp"
+            android:paddingEnd="19dp"
+            android:paddingBottom="7dp"
+            android:singleLine="true"
+            android:text="Напитки" />
+    </LinearLayout>
+</HorizontalScrollView>
