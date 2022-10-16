@@ -14,8 +14,6 @@ import com.ru.pizzaapp.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
-    //TODO: Adding progressbar with the pattern?
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
