@@ -42,7 +42,7 @@ public class HomeFragment extends Fragment {
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        recyclerView = binding.foodItemsCategory;
+        recyclerView = binding.foodRecyclerview;
         menuAdapter = new MenuAdapter(getContext());
         citiesSpinner = binding.citiesSpinner;
 

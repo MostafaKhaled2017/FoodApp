@@ -1,77 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    style="@style/groupStylewhite_A700">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/app_bar"
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/home_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fitsSystemWindows="true">
+        android:layout_height="wrap_content">
 
-        <com.google.android.material.appbar.CollapsingToolbarLayout
-            android:id="@+id/toolbar_layout"
-            style="@style/Widget.MaterialComponents.Toolbar.Primary"
+        <RelativeLayout
+            android:id="@+id/header"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fitsSystemWindows="true"
-            app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed"
-            app:toolbarId="@+id/toolbar">
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
 
-            <RelativeLayout
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/cities_spinner"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="4dp"
+                tools:ignore="TouchTargetSizeCheck"
+                tools:listitem="@layout/spinner_item" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageCar"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="7dp"
+                android:layout_marginStart="245dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_car"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/img_car" />
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        style="@style/groupStylewhite_A700"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/home_toolbar">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/toolbar_layout"
+                style="@style/Widget.MaterialComponents.Toolbar.Primary"
                 android:layout_width="match_parent"
-                android:layout_height= "wrap_content"
-                android:background="@color/white">
+                android:layout_height="wrap_content"
+                android:fitsSystemWindows="true"
+                app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed"
+                app:toolbarId="@+id/toolbar">
 
-                <androidx.appcompat.widget.Toolbar
-                    android:id="@+id/home_toolbar"
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:layout_collapseMode="pin">
-                    <RelativeLayout android:id="@+id/header"
-                        android:layout_marginTop="8dp"
+                    android:background="@color/white">
+
+                    <include
+                        layout="@layout/ads_banner"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_width="match_parent" android:orientation="horizontal">
+                        android:background="#ffffff" />
 
-                        <androidx.appcompat.widget.AppCompatSpinner
-                            android:id="@+id/cities_spinner"
-                            android:layout_width="120dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="3dp"
-                            android:layout_marginBottom="4dp"
-                            tools:ignore="TouchTargetSizeCheck"
-                            tools:listitem="@layout/spinner_item" />
-                        <androidx.appcompat.widget.AppCompatImageView android:id="@+id/imageCar"
-                            android:layout_height="24dp"
-                            android:layout_marginStart="245dp"
-                            android:layout_width="24dp"
-                            android:layout_alignParentEnd="true"
-                            android:scaleType="fitXY"
-                            android:layout_margin="7dp"
-                            android:src="@drawable/img_car"
-                            tools:ignore="ContentDescription" tools:src="@drawable/img_car"/>
-                    </RelativeLayout>
+                </RelativeLayout>
 
-                </androidx.appcompat.widget.Toolbar>
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
 
+            <include layout="@layout/categories_bar" />
 
-                <include layout="@layout/ads_banner"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/home_toolbar"
-                    android:background="#ffffff"/>
-
-            </RelativeLayout>
-
-        </com.google.android.material.appbar.CollapsingToolbarLayout>
-
-        <include layout="@layout/categories_bar"/>
-
-    </com.google.android.material.appbar.AppBarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
 
 
     <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
@@ -93,12 +103,13 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="50dp"
             layout_behavior="@string/appbar_scrolling_view_behavior"
-            android:id="@+id/food_items_category"/>
+            android:id="@+id/food_recyclerview"/>
 
         </RelativeLayout>
 
 
     </androidx.core.widget.NestedScrollView>
 
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</RelativeLayout>

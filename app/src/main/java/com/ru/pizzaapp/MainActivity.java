@@ -15,6 +15,7 @@ import com.ru.pizzaapp.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
+    //TODO: Adding spinner with the pattern?
     //TODO: Reformat all code files
     //TODO: Test the app on different screen sizes and android versions
     //TODO: Remove redunant resources
