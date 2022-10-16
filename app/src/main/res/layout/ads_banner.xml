@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginTop="32dp"
+    android:background="@color/white"
     android:clipToPadding="false"
     android:fillViewport="true"
     android:gravity="start">
@@ -47,7 +48,7 @@
                     android:layout_height="112dp"
                     android:layout_marginStart="16dp"
                     android:scaleType="fitXY"
-                    android:src="@drawable/img_rectangle39"
+                    android:src="@drawable/img_rectangle38"
                     tools:ignore="ContentDescription" />
             </LinearLayout>
         </HorizontalScrollView>
