@@ -7,3 +7,6 @@ In this project, I implemented the main screen for a food Delivery app.
 </ul><br/><br/>
 
 ![screen](https://user-images.githubusercontent.com/32040158/196042318-9226340d-4270-4a12-9906-b7a945c83326.jpg)
+
+
+<img src="https://user-images.githubusercontent.com/32040158/196042318-9226340d-4270-4a12-9906-b7a945c83326.jpg" width = "655" height="1080" />
