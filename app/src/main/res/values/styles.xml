@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="txtRobotobold16">
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">@color/bluegray_900</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textFontWeight" tools:targetApi="p">700</item>
+    </style>
+
+    <style name="groupStylecornerRadius_1">
+        <item name="android:background">@drawable/rectangle_radius_6</item>
+    </style>
+
+    <style name="txtSFUIDisplayregular14">
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColor">@color/gray_500</item>
+        <item name="android:fontFamily">@font/sf_ui_display</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+
+    <style name="btnRoundedOutline">
+        <item name="android:textSize">13dp</item>
+        <item name="android:textColor">@color/pink_400</item>
+        <item name="android:fontFamily">@font/sf_ui_display</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+        <item name="android:background">@drawable/rectangle_border_pink_400_radius_6</item>
+    </style>
+
+    <style name="groupStylegray_50">
+        <item name="android:background">@drawable/rectangle_bg_gray_50</item>
+    </style>
+
+    <style name="groupStylecornerRadius">
+        <item name="android:background">@drawable/rectangle_radius_10</item>
+    </style>
+
+    <style name="txtSolidRounded">
+        <item name="android:textSize">13dp</item>
+        <item name="android:textColor">@color/pink_400</item>
+        <item name="android:fontFamily">@font/sf_ui_display</item>
+        <item name="android:textFontWeight" tools:targetApi="p">600</item>
+        <item name="android:background">@drawable/rectangle_bg_pink_400_33_radius_6</item>
+    </style>
+
+    <style name="txtSolidRounded_1">
+        <item name="android:textSize">13dp</item>
+        <item name="android:textColor">@color/gray_400</item>
+        <item name="android:fontFamily">@font/sf_ui_display</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+        <item name="android:background">@drawable/rectangle_bg_white_a700_radius_6</item>
+    </style>
+
+    <style name="groupStylewhite_A700">
+        <item name="android:background">@drawable/rectangle_bg_white_a700</item>
+    </style>
+
+</resources>

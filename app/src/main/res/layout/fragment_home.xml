@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true">
-
+    android:fitsSystemWindows="true"
+    style="@style/groupStylewhite_A700">
 
     <!-- TODO: Add custom theme if needed -->
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/app_bar"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/app_bar_height"
+        android:layout_height="wrap_content"
         android:fitsSystemWindows="true">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
@@ -20,7 +20,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fitsSystemWindows="true"
-            app:contentScrim="?attr/colorPrimary"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
             app:toolbarId="@+id/toolbar">
 
@@ -28,50 +27,146 @@
                 android:layout_width="match_parent"
                 android:layout_height= "wrap_content" >
 
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/expandedImage"
-                    android:layout_width="200dp"
-                    android:layout_height="200dp"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/pizza"
-                    android:layout_margin="15dp"
-                    />
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/home_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_collapseMode="pin">
+                    <RelativeLayout android:id="@+id/header"
+                        android:layout_marginTop="8dp"
+                        android:layout_height="wrap_content"
+                        app:layout_collapseMode="pin"
+                        android:layout_width="match_parent" android:orientation="horizontal">
 
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:text="Test"
-                    android:layout_toRightOf="@id/expandedImage"
-                    android:layout_centerVertical="true"
-                    android:textSize="24sp"/>
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/cities_spinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="4dp"
+                            tools:ignore="TouchTargetSizeCheck"
+                            tools:listitem="@layout/spinner_item" />
+                        <androidx.appcompat.widget.AppCompatImageView android:id="@+id/imageCar"
+                            android:layout_height="24dp"
+                            android:layout_marginStart="245dp"
+                            android:layout_width="24dp"
+                            android:layout_alignParentEnd="true"
+                            android:scaleType="fitXY"
+                            android:layout_margin="7dp"
+                            android:src="@drawable/img_car"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_car"/>
+                    </RelativeLayout>
 
+                </androidx.appcompat.widget.Toolbar>
+
+
+                <include layout="@layout/ads_banner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/home_toolbar"
+                    android:background="#ffffff"/>
 
             </RelativeLayout>
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/category_recycler_view"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-
-
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
+
 
     <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         tools:context=".ScrollingActivity"
         tools:showIn="@layout/fragment_home">
 
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <!-- TODO: Make it dynamic? -->
+            <LinearLayout
+                android:id="@+id/horizonal_bar"
+                style="@style/groupStylecornerRadius_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtOne"
+                    style="@style/txtSolidRounded"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25"
+                    android:ellipsize="end"
+                    android:paddingStart="24dp"
+                    android:paddingTop="11dp"
+                    android:paddingEnd="23dp"
+                    android:paddingBottom="7dp"
+                    android:singleLine="true"
+                    android:text="Пицца" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtTwo"
+                    style="@style/txtSolidRounded_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="0.25"
+                    android:ellipsize="end"
+                    android:paddingStart="24dp"
+                    android:paddingTop="11dp"
+                    android:paddingEnd="25dp"
+                    android:paddingBottom="7dp"
+                    android:singleLine="true"
+                    android:text="Комбо" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtThree"
+                    style="@style/txtSolidRounded_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="0.25"
+                    android:ellipsize="end"
+                    android:paddingStart="18dp"
+                    android:paddingTop="11dp"
+                    android:paddingEnd="17dp"
+                    android:paddingBottom="7dp"
+                    android:singleLine="true"
+                    android:text="Десерты" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtFour"
+                    style="@style/txtSolidRounded_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="0.25"
+                    android:ellipsize="end"
+                    android:paddingStart="18dp"
+                    android:paddingTop="11dp"
+                    android:paddingEnd="19dp"
+                    android:paddingBottom="7dp"
+                    android:singleLine="true"
+                    android:text="Напитки" />
+            </LinearLayout>
+
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:id="@+id/food_items_category"/>
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:id="@+id/food_items_category"
+            android:layout_below="@id/horizonal_bar"/>
+
+        </RelativeLayout>
 
 
     </androidx.core.widget.NestedScrollView>
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

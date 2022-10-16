@@ -1,45 +1,64 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<?xml version="1.0" encoding="UTF-8"?>
 
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearRowone"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:tools="http://schemas.android.com/tools"
-    app:cardElevation="10dp"
-    app:cardCornerRadius="20dp"
-    android:layout_margin="10dp"
-    app:cardBackgroundColor="@color/white"
-    app:cardMaxElevation="12dp"
-    app:cardPreventCornerOverlap="true"
-    app:cardUseCompatPadding="true">
+    android:orientation="horizontal">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".MainActivity">
-        <ImageView
-            android:id="@+id/food_image"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:layout_gravity="center"
-            android:src="@drawable/ic_launcher_foreground"
-            android:layout_margin="10dp"
-            android:contentDescription="@string/app_name" />
+    <ImageView
+        android:id="@+id/food_image"
+        android:layout_width="135dp"
+        android:layout_height="135dp"
+        android:scaleType="fitXY"
+        tools:ignore="ContentDescription" />
+
+    <LinearLayout
+        android:id="@+id/linearColumnlanguage"
+        style="@style/groupStylecornerRadius_1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_weight="0.56"
+        android:gravity="start"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/item_name"
-            android:layout_width="wrap_content"
+            style="@style/txtRobotobold16"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Item Name"
-            android:layout_toEndOf="@id/food_image"
-            android:layout_gravity="bottom|center_horizontal"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            />
+            android:layout_marginEnd="10dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="Label"/>
 
-    </RelativeLayout>
+        <TextView
+            android:id="@+id/description"
+            style="@style/txtSFUIDisplayregular14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:layout_marginEnd="10dp"
+            android:text="Tomato, Onion, Sauce ..." />
 
-    </androidx.cardview.widget.CardView>
-
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/price_btn"
+            style="@style/btnRoundedOutline"
+            android:layout_width="87dp"
+            android:layout_height="32dp"
+            android:layout_gravity="end"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:paddingStart="18dp"
+            android:paddingTop="9dp"
+            android:paddingEnd="18dp"
+            android:paddingBottom="9dp"
+            android:singleLine="true"
+            android:text="From 35 R"
+            android:textAllCaps="false" />
+    </LinearLayout>
+</LinearLayout>

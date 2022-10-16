@@ -39,6 +39,7 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.EventsViewHold
     public void onBindViewHolder(EventsViewHolder holder, int position) {
         final Food currentFood = foodList.get(position);
         holder.foodItem.setText(currentFood.getName());
+        holder.description.setText(currentFood.getDescription());
 
         //Load the image in the app using glide library
         Glide.with(mContext).load(currentFood.getImageUrl()).into(holder.foodImage);
@@ -56,13 +57,15 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.EventsViewHold
     }
 
     class EventsViewHolder extends RecyclerView.ViewHolder {
-        TextView foodItem;
+        TextView foodItem, description;
         ImageView foodImage;
 
         EventsViewHolder(View itemView) {
             super(itemView);
             foodItem = itemView.findViewById(R.id.item_name);
             foodImage = itemView.findViewById(R.id.food_image);
+            description = itemView.findViewById(R.id.description);
+
 
         }
 

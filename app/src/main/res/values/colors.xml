@@ -7,4 +7,19 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="bluegray_900">#222831</color>
+    <color name="gray_600">#7b7b7b</color>
+    <color name="gray_400">#c2c4c8</color>
+    <color name="gray_500">#a9aaad</color>
+    <color name="gray_400_2b">#2bbebebe</color>
+    <color name="gray_200">#f0f0f0</color>
+    <color name="white_A700">#ffffff</color>
+    <color name="pink_400">#fd3a69</color>
+    <color name="gray_50">#fafafa</color>
+    <color name="pink_400_33">#33fd3a69</color>
+    <color name="gray_100">#f3f5f9</color>
+    <color name="ic_launcher_background">#FFFFFF</color>
+
+    <color name="pink">#FD3A69</color>
 </resources>
