@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">PizzaApp</string>
+    <string name="app_name">FoodApp</string>
     <string name="title_menu">Меню</string>
     <string name="title_profile">Профиль</string>
     <string name="title_basket">Корзина</string>
