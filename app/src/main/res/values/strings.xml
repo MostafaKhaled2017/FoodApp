@@ -65,5 +65,12 @@
         Bold, graphic, intentional.\n\n
 
     </string>
+    <string name="kombo">Комбо</string>
+    <string name="desserts">Десерты</string>
+    <string name="beverages">Напитки</string>
+    <string name="pizza">Пицца</string>
+    <string name="price">от 345 р</string>
+    <string name="item_name">Label</string>
+    <string name="food_item_description">Tomato, Onion, Sauce ...</string>
 
 </resources>

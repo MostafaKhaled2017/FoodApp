@@ -18,11 +18,12 @@ public class HomeViewModel extends ViewModel {
         menuLiveData = new MutableLiveData<>();
         init();
     }
-    public MutableLiveData<ArrayList<Food>> getFoodMutableLiveData(){
+
+    public MutableLiveData<ArrayList<Food>> getFoodMutableLiveData() {
         return menuLiveData;
     }
 
-    public void init(){
+    public void init() {
 
         fetchMenu();
 

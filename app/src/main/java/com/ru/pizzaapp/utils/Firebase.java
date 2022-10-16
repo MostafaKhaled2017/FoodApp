@@ -1,7 +1,6 @@
 package com.ru.pizzaapp.utils;
 
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.FirebaseFirestoreSettings;
 
 public class Firebase {
 

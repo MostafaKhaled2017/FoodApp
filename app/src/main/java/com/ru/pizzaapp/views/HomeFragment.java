@@ -67,13 +67,10 @@ public class HomeFragment extends Fragment {
 
     private void initializeSpinner() {
         //Assign the string array to the spinner
-        ArrayAdapter<String> customAdapter= new ArrayAdapter(getContext(), R.layout.spinner_item, R.id.spinner_text, getResources().getStringArray(R.array.russian_cities));
+        ArrayAdapter<String> customAdapter = new ArrayAdapter(getContext(), R.layout.spinner_item, R.id.spinner_text, getResources().getStringArray(R.array.russian_cities));
         citiesSpinner.setAdapter(customAdapter);
 
         citiesSpinner.getBackground().setColorFilter(getResources().getColor(R.color.black), PorterDuff.Mode.SRC_ATOP);
-
-
-        //TODO: Set a maximum height for the spinner, so that it doesn't take up the whole screen
 
         citiesSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override

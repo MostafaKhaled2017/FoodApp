@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<HorizontalScrollView android:id="@+id/horizonal_bar"
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:paddingStart="10dp"
-    android:paddingBottom="5dp"
-    android:paddingTop="8dp"
     android:background="@color/white"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:paddingStart="10dp"
+    android:paddingTop="8dp"
+    android:paddingBottom="5dp">
+
     <LinearLayout
         style="@style/groupStylecornerRadius_1"
         android:layout_width="wrap_content"
@@ -15,7 +15,6 @@
         android:orientation="horizontal">
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/txtOne"
             style="@style/txtSolidRounded"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -26,10 +25,9 @@
             android:paddingEnd="23dp"
             android:paddingBottom="7dp"
             android:singleLine="true"
-            android:text="Пицца" />
+            android:text="@string/pizza" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/txtTwo"
             style="@style/txtSolidRounded_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -41,10 +39,9 @@
             android:paddingEnd="25dp"
             android:paddingBottom="7dp"
             android:singleLine="true"
-            android:text="Комбо" />
+            android:text="@string/kombo" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/txtThree"
             style="@style/txtSolidRounded_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -56,10 +53,9 @@
             android:paddingEnd="17dp"
             android:paddingBottom="7dp"
             android:singleLine="true"
-            android:text="Десерты" />
+            android:text="@string/desserts" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/txtFour"
             style="@style/txtSolidRounded_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -71,6 +67,6 @@
             android:paddingEnd="19dp"
             android:paddingBottom="7dp"
             android:singleLine="true"
-            android:text="Напитки" />
+            android:text="@string/beverages" />
     </LinearLayout>
 </HorizontalScrollView>

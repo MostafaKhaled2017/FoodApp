@@ -1,7 +1,5 @@
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/scrollViewScrollview"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginTop="32dp"
@@ -11,12 +9,10 @@
     android:gravity="start">
 
     <FrameLayout
-        android:id="@+id/frameStackrectanglethirtyeight"
         android:layout_width="match_parent"
         android:layout_height="685dp">
 
         <HorizontalScrollView
-            android:id="@+id/horizontalScrollHorizontalscrollrectanglethirtyeight"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="top|end"
@@ -25,9 +21,7 @@
             android:fillViewport="true"
             android:scrollbars="none">
 
-            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:tools="http://schemas.android.com/tools"
-                android:id="@+id/linearRowrectanglethirtyeight"
+            <LinearLayout
                 style="@style/groupStylecornerRadius"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
